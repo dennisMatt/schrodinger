@@ -587,8 +587,9 @@ funBeta<-function(x){
       forageRast[forageRast==1]<-0
      
       forage.i<-(forageRast*fWeights)
-    
-      win=matrix(1,ncol=11,nrow=11)
+
+      #Normalise bu N cells within foraging distance
+      win=matrix(1,ncol=round(radiusF/res(forage.i)[1])+1,nrow=round(radiusF/res(forage.i)[1])+1)
       win=win/sum(win)
     
       focalForageSum<-focal(extend(forage.i,10,fill=0),w=win,fun="sum")
