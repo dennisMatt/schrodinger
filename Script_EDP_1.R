@@ -600,7 +600,7 @@ funBetaHab<-function(x){
   y<-ceiling(nrow(matBaseForage)/2)
   
   focalCellForage<-matBaseForage[x,y]
-  
+  indFocalForage<-which(matBaseForage==focalCellForage,arr.ind = T)
   #compute distances
   distListForage<-list()
   
