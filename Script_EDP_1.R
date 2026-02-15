@@ -41,7 +41,7 @@ waterWeight<-0.3
 urbanWeight<-0.2
 
 
-#############################Nesting values
+#############################Nesting values (from Gardner et al.)
 
 
 
